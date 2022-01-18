@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -192,7 +193,7 @@
         <!--Chat View Controller-->
         <scene sceneID="RgN-ji-uN0">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="yda-JS-gLz" customClass="ChatViewController" customModule="TestChat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="yda-JS-gLz" customClass="ChatViewController" customModule="TestChat" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="y52-OY-LlI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -222,7 +223,7 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <color key="backgroundColor" name="BrandLightBlue"/>
                                 <constraints>
                                     <constraint firstItem="Byx-2m-E79" firstAttribute="top" secondItem="cX7-we-VeR" secondAttribute="top" constant="10" id="Bmk-bl-Fi3"/>
                                     <constraint firstAttribute="height" constant="60" id="LMq-Kb-AKi"/>
@@ -285,11 +286,11 @@
         <segue reference="b0u-1c-Rws"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <namedColor name="BrandLightBlue">
+            <color red="0.92199999094009399" green="0.98000001907348633" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

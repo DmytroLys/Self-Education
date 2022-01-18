@@ -20,9 +20,16 @@ class ChatViewController: UIViewController  {
     
     var messages: [Message] = []
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        loadMessage()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        tableView.contentInsetAdjustmentBehavior = .never
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
@@ -34,9 +41,6 @@ class ChatViewController: UIViewController  {
         navigationItem.hidesBackButton = true
         
         title = Constants.titleLabel
-        
-        loadMessage()
-        
         
     }
     
@@ -123,8 +127,26 @@ extension ChatViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! NewMessageCell
-        cell.textMessageLabel.text = messages[indexPath.row].body
+        cell.textMessageLabel.text = message.body
+        
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.youLabel.isHidden = true
+            cell.meLabel.isHidden = false
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.lightPurple)
+            cell.textMessageLabel.textColor = UIColor(named: Constants.BrandColors.purple)
+        } else {
+            cell.youLabel.isHidden = false
+            cell.meLabel.isHidden = true
+            cell.messageBubble.backgroundColor = UIColor(named: Constants.BrandColors.purple)
+            cell.textMessageLabel.textColor = UIColor(named: Constants.BrandColors.lightPurple)
+        }
+        
+        
+        
         return cell
     }
 }

@@ -20,6 +20,8 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
 //        welcomeLabel.text = Constants.titleLabel
         
+        navigationController?.navigationBar.barTintColor = UIColor(named: Constants.BrandColors.lighBlue)
+        
         print("viewDidLoad")
 
     }

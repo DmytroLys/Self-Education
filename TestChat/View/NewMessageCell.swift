@@ -13,8 +13,9 @@ class NewMessageCell: UITableViewCell {
     
     @IBOutlet var messageBubble: UIView!
     
+    @IBOutlet var meLabel: UILabel!
+    @IBOutlet var youLabel: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         
