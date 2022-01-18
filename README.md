@@ -1,12 +1,14 @@
 # TestChat
 
+![]()
+
 ## My Goal
 
-Learn more about TableView, create own custom Cell.
+Learn more about TableView, create custom Cell.
 
-## What you will create
+## What I created
 
-We will be using a service called Firebase Firestore as a backend database to store and retrieve our messages from the cloud. 
+I have used a service called Firebase Firestore as a backend database to store and retrieve our messages from the cloud. 
 
 ## What have I learned
 
