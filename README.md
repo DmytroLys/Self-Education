@@ -1,6 +1,7 @@
 # TestChat
 
 ![Alt Text](https://github.com/DmytroLys/TestChat/blob/main/Screenshots/WelcomeScreen.gif)
+---
 ![Alt Text](https://github.com/DmytroLys/TestChat/blob/main/Screenshots/ChatView.gif)
 
 ## My Goal
