@@ -1,6 +1,6 @@
 # TestChat
 
-![Alt Text]()
+![Alt Text](https://github.com/DmytroLys/TestChat/blob/main/Screenshots/Simulator%20Screen%20Recording.gif)
 
 ## My Goal
 
