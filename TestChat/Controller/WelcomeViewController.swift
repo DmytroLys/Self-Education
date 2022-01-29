@@ -22,7 +22,7 @@ class WelcomeViewController: UIViewController {
         
         navigationController?.navigationBar.barTintColor = UIColor(named: Constants.BrandColors.lighBlue)
         
-        print("viewDidLoad")
+        print("add newFeature")
 
     }
     
